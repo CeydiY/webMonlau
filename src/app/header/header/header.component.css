@@ -1,0 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+a:hover {
+  color: #ea6981;
+  text-decoration: none;
+}
