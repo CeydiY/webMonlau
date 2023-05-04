@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { BodyComponent } from './body/body/body.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { AngularTypewriterEffectModule } from "angular-typewriter-effect";
 
 @NgModule({
   declarations: [
@@ -13,9 +14,10 @@ import { FooterComponent } from './footer/footer/footer.component';
     BodyComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        AngularTypewriterEffectModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
