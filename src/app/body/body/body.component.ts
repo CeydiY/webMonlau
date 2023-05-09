@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-//import Typewriter from 't-writer.js'
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -7,9 +6,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements  OnInit{
-  i = 0;
-  txt = "DAW";
-  speed = 150;
+
 
   ngOnInit(){
     this.typeWriter();
@@ -17,19 +14,34 @@ export class BodyComponent implements  OnInit{
 
 
  typeWriter() {
-    if (this.i < this.txt?.length) {
-      console.log(this.txt?.length)
-      document.getElementById("demo")!.innerHTML += this.txt.charAt(this.i);
-      console.log(this.txt.charAt(this.i));
-      this.i++;
-      console.log(this.i++)
-      setTimeout(this.typeWriter, this.speed);
-    }
+   let words = ['M06', '2º Daw', 'Monlau', 'Developers', 'Web Designers'],
+     wordWrapper = document.getElementById('word')!,
+     wordWrapperContent = wordWrapper.innerHTML,
+     addingWord = false,
+     counter = 1;
+   setInterval(function(){
+     if(wordWrapperContent.length > 0 && !addingWord ) {
+       wordWrapper.innerHTML = wordWrapperContent.slice(0, -1);
+       wordWrapperContent = wordWrapper.innerHTML;
+     } else {
+       addingWord = true;
+     }
+     if( addingWord ){
+       if( wordWrapperContent.length < words[counter].length  ) {
+         wordWrapper.innerHTML = words[counter].slice(0, wordWrapperContent.length + 1);
+         wordWrapperContent = wordWrapper.innerHTML;
+       } else {
+         if( counter < words.length) {
+           counter ++
+         }
+         addingWord = false;
+       }
+     }
+     if( counter == words.length) {
+       counter = 0;
+     }
+   }, 200);
   };
-
-
-
-
 
 }
 

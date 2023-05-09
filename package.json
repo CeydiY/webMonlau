@@ -21,9 +21,11 @@
     "angular-typewriter": "^0.0.15",
     "angular-typewriter-effect": "^0.0.1",
     "bootstrap": "^5.2.3",
+    "ngx-typed-js": "^2.1.1",
     "rxjs": "~7.8.0",
     "t-writer.js": "^1.0.4",
     "tslib": "^2.3.0",
+    "typed.js": "^2.0.16",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
