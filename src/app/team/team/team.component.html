@@ -1,1 +1,56 @@
-<p>team works!</p>
+<div class="row mt-5 mb-3">
+  <h1 class="text-center"><i class="fa-solid fa-people-group"></i>&nbsp;Nuestro Equipo</h1>
+  <p class="text-center h4">Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
+</div>
+<div class="container mt-5 mb-5" id="main-container">
+  <div class="row">
+    <div class="col-md-5 col-xl-5" *ngFor="let team_information of team;">
+      <div class="card">
+        <div class="card-body">
+          <div class="col-6">
+            <img src="{{team_information.img}}" alt="avatar" class="img-fluid rounded mx-auto d-block">
+            </div>
+          </div>
+          <div class="col-5 card-title mb-0">
+            <h5>{{team_information.nombre}}&nbsp;{{team_information.primerApellido}}<br>{{team_information.segundoApellido}}</h5>
+            <p class="m-0"><strong>Age:&nbsp;</strong>{{team_information.edad}}</p>
+            <p class="m-0"><strong>Birthdate: &nbsp;</strong>{{team_information.cumple}}</p>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>&nbsp;Email: {{team_information.email}}</li>
+          <li class="list-group-item"><i class="fa-solid fa-address-book float-right"></i>&nbsp;Country: {{team_information.pais}}</li>
+        </ul>
+        <div class="card-footer">
+          <ul class="social-links list-inline float-start mb-0">
+            <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="{{team_information.linkedin}}" data-original-title="Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="{{team_information.github}}}" data-original-title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container d-flex align-items-center justify-content-center flex-wrap">
+  <ng-container *ngFor="let teamB of team">
+    <div class="box">
+      <div class="body">
+        <div class="col-6 imgContainer">
+          <img src="{{teamB.img}}" class="card-img-top" alt="avatar">
+        </div>
+        <div class="col-5 card-title mb-0">
+          <h5>{{teamB.nombre}}&nbsp;{{teamB.primerApellido}}<br>{{teamB.segundoApellido}}</h5>
+          <p class="m-0"><strong>Age:&nbsp;</strong>{{teamB.edad}}</p>
+          <p class="m-0"><strong>Birthdate: &nbsp;</strong>{{teamB.cumple}}</p>
+        </div>
+        <div class="content d-flex flex-column align-items-center justify-content-center">
+          <div>
+            <h5>{{teamB.nombre}}&nbsp;{{teamB.primerApellido}}<br>{{teamB.segundoApellido}}</h5>
+            <p class="m-0"><strong>Age:&nbsp;</strong>{{teamB.edad}}</p>
+            <p class="m-0"><strong>Birthdate: &nbsp;</strong>{{teamB.cumple}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

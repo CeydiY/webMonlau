@@ -32,71 +32,35 @@
       <div class="col-lg-5">
         <h2 class="technologies">Front-end</h2>
         <ul class="features-items">
+          <ng-container *ngFor="let front_end of frontEnd">
           <li class="feature-item">
             <div class="left-icon">
-              <img src="assets/img/home/HTML.png" alt="HTML">
+              <img src="{{front_end.img}}" alt="HTML">
             </div>
             <div class="right-content">
               <h4>HTML</h4>
-              <p> Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
-              <a href="#" class="text-button">Saber más</a>
+              <p> {{front_end.p}}</p>
+              <a href="{{front_end.link}}" class="text-button" target="_blank">Saber más</a>
             </div>
           </li>
-          <li class="feature-item">
-            <div class="left-icon">
-              <img src="assets/img/home/React.png" alt="React">
-            </div>
-            <div class="right-content">
-              <h4>React</h4>
-              <p> Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
-              <a href="#" class="text-button">Saber más</a>
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="left-icon">
-              <img src="assets/img/home/Angular.png" alt="Angular">
-            </div>
-            <div class="right-content">
-              <h4>Angular</h4>
-              <p> Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
-              <a href="#" class="text-button">Saber más</a>
-            </div>
-          </li>
+          </ng-container>
         </ul>
       </div>
       <div class="col-lg-6">
         <h2 class="technologies">Back-end</h2>
         <ul class="features-items">
+          <ng-container *ngFor="let back_end of banckEnd">
           <li class="feature-item">
             <div class="left-icon">
-              <img src="assets/img/home/PHP.png" alt="PHP">
+              <img src="{{back_end.img}}" alt="PHP">
             </div>
             <div class="right-content">
               <h4>PHP</h4>
-              <p>Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
-              <a href="#" class="text-button">Saber más</a>
+              <p>{{back_end.p}}</p>
+              <a href="{{back_end.link}}" class="text-button" target="_blank">Saber más</a>
             </div>
           </li>
-          <li class="feature-item">
-            <div class="left-icon">
-              <img src="assets/img/home/javascript.png" alt="JavaScript">
-            </div>
-            <div class="right-content">
-              <h4>Yoga Training</h4>
-              <p>This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
-              <a href="#" class="text-button">Saber más</a>
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="left-icon">
-              <img src="assets/img/home/java.jpg" alt="Java">
-            </div>
-            <div class="right-content">
-              <h4>Body Building Course</h4>
-              <p>Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.</p>
-              <a href="#" class="text-button">Saber más</a>
-            </div>
-          </li>
+          </ng-container>
         </ul>
       </div>
     </div>
