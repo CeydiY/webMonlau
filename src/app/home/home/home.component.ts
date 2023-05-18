@@ -8,16 +8,19 @@ import {Component, OnInit} from '@angular/core';
 export class HomeComponent implements  OnInit{
   frontEnd = [
     {
+      title: 'HTML',
       img: 'assets/img/home/HTML.png',
       p: "Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.",
       link: "https://www.w3schools.com/html/"
     },
     {
+      title: 'Angular',
       img: 'assets/img/home/Angular.png',
       p: "Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.",
       link: "https://angular.io/docs"
     },
     {
+      title: 'React',
       img: 'assets/img/home/React.png',
       p: "Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.",
       link: "https://legacy.reactjs.org/docs/getting-started.html"
@@ -25,16 +28,19 @@ export class HomeComponent implements  OnInit{
   ]
   banckEnd =[
     {
+      title: 'PHP',
       img: 'assets/img/home/PHP.png',
       p: "Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.",
       link: "https://www.php.net/docs.php"
     },
     {
+      title: 'JavaScript',
       img: 'assets/img/home/javascript.png',
       p: "Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
+      title: 'Java',
       img: 'assets/img/home/java.jpg',
       p: "Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.",
       link: "https://dev.java/learn/"
