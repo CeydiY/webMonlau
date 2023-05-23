@@ -1,0 +1,54 @@
+<div class="row mt-5 mb-3">
+  <h1 class="text-center h1Team"><i class="fa-solid fa-people-group"></i>&nbsp;Nuestro Equipo</h1>
+  <p class="text-center h4">Interdum habitant dapibus iaculis lacinia purus dui, nullam condimentum metus ante vehicula curabitur, nulla senectus parturient donec nisi.</p>
+</div>
+<div class="search">
+  <form class="d-flex formSearch" role="search">
+    <input type="search"
+           name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search client..." required>
+  </form>
+</div>
+<div class="row row-cols-1 row-cols-sm-5 cardTeam">
+  <ng-container *ngFor="let teamB of team">
+    <div class="col">
+      <div class="card">
+        <div class="card__side card__side--front-1">
+          <div class="card__title card__title--1">
+            <div class="avatar mx-auto white">
+              <img src="{{teamB.img}}" class="rounded-circle img-fluid" alt="avatar">
+            </div>
+          </div>
+          <div class="card__details">
+            <h4 class="card-title font-weight-bold text-center">{{teamB.nombre}}&nbsp;{{teamB.primerApellido}}<br>{{teamB.segundoApellido}}</h4>
+            <hr>
+            <p class="m-0"><i class="fa-brands fa-pagelines"></i>&nbsp;<strong>Age:&nbsp;</strong>{{teamB.edad}}</p>
+            <p class="m-0"><i class="fa-solid fa-cake-candles"></i>&nbsp;<strong>Birthdate: &nbsp;</strong>{{teamB.cumple}}</p>
+            <p class="m-0"><i class="fa fa-envelope"></i>&nbsp;<strong>Email:</strong> {{teamB.email}}</p>
+            <p class="m-0"><i class="fa-solid fa-address-book"></i>&nbsp;<strong>Country:</strong> {{teamB.pais}}</p>
+          </div>
+        </div>
+        <div class="card__side card__side--back card__side--back-1">
+          <div class="card__cta">
+            <div class="card__price-box">
+              <h1>Sobre mí</h1>
+              <hr>
+              <br>
+              <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <br>
+              <hr>
+              <ul class="social-links list-inline float-start mb-0">
+                <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="{{teamB.linkedin}}" data-original-title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="{{teamB.github}}" data-original-title="Github" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
